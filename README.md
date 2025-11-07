@@ -14,14 +14,12 @@ pokedex_model.keras — The final trained TensorFlow/Keras model.
 
 pokemon_class_names.npy — NumPy array that maps the model’s output to the correct Pokémon name.
 
-How to Run (Local Prediction)
+  How to Run (Local Prediction)
 
 Clone or download this repository and ensure the following files are in the same folder:
 
 predict.py
-
 pokedex_model.keras
-
 pokemon_class_names.npy
 
 1. Install the required libraries:
@@ -34,26 +32,10 @@ pip install tensorflow numpy pillow
 python predict.py mrmine.png
 
 
-You should see something like:
+  You should see something like:
 
-✅ Model and class names loaded.
+Model and class names loaded.
 Processing mrmine.png...
 This image is most likely a Mr. Mime with 99.78% confidence.
-
-  How to Re-Train the Model (Google Colab)
-
-Open PokemonGen1Classifier.ipynb in Google Colab.
-
-The notebook contains all steps:
-
-Download dataset from Kaggle
-
-Build the model (MobileNetV2 transfer learning)
-
-Train and evaluate
-
-You can also load pokedex_model.keras and pokemon_class_names.npy from this repository and test them inside the notebook.
-
-Dataset
 
 This model was trained on the “First Gen Pokémon Classification” dataset from Kaggle.
