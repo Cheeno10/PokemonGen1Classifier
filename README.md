@@ -1,52 +1,44 @@
-# 🧬 Pokédex: Gen 1 Image Classifier  
-Identify any of the original **151 Generation 1 Pokémon** from an image.
+# Pokédex: Gen 1 Image Classifier
+
+A machine learning model that identifies any of the original **151 Generation 1 Pokémon** from an image.  
+Built using **TensorFlow/Keras** with **MobileNetV2 transfer learning**. Training and fine-tuning were done in **Google Colab**.
 
 ---
 
-### 🚀 Overview
-A machine learning model built using **TensorFlow/Keras** with **transfer learning (MobileNetV2)**.  
-Training and fine-tuning were performed in **Google Colab**.
-
----
-
-### 📂 Files in this Repository
+## Repository Files
 
 | File | Description |
 |------|-------------|
-| `PokemonGen1Classifier.ipynb` | Google Colab notebook (dataset loading, training, and tuning). |
-| `predict.py` | Script for running predictions locally. |
-| `pokedex_model.keras` | Final trained model. |
-| `pokemon_class_names.npy` | NumPy array mapping model outputs to Pokémon names. |
+| `PokemonGen1Classifier.ipynb` | Google Colab notebook containing data loading, model building, training, and tuning. |
+| `predict.py` | Script used to run local predictions. |
+| `pokedex_model.keras` | Final trained TensorFlow/Keras model. |
+| `pokemon_class_names.npy` | NumPy array mapping model output to the corresponding Pokémon name. |
 
 ---
 
-## 🖥️ How to Run (Local Prediction)
+## How to Run (Local Prediction)
 
-1. **Clone / Download** this repository.
-2. Make sure these files are in the same folder:
+1. Clone or download the repository.
+2. Ensure the following files are in the same folder:
    - `predict.py`
    - `pokedex_model.keras`
    - `pokemon_class_names.npy`
 
----
-
-### ✅ Install Requirements
+### Install requirements
 
 ```bash
 pip install tensorflow numpy pillow
 ```
 
----
+### Run a prediction
 
-### 🔍 Run a Prediction
-
-> Example image: `mrmime.png` (must be in the same folder)
+Place an image (example: `mrmime.png`) in the same folder, then run:
 
 ```bash
 python predict.py mrmime.png
 ```
 
-Expected output:
+Example output:
 
 ```
 Model and class names loaded.
@@ -56,9 +48,7 @@ This image is most likely a Mr. Mime with 99.78% confidence.
 
 ---
 
-### 📦 Dataset Used
-Model trained on the **“First Gen Pokémon Classification”** dataset (Kaggle).
+## Dataset
 
----
+Trained on the [**"First Gen Pokémon Classification"**](https://www.kaggle.com/datasets/rogerkoala/first-gen-pokemon) dataset (Kaggle).
 
-⭐ If you find this useful, consider giving the project a star!
