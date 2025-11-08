@@ -1,41 +1,64 @@
-Pokédex: Gen 1 Image Classifier 🧬
+# 🧬 Pokédex: Gen 1 Image Classifier  
+Identify any of the original **151 Generation 1 Pokémon** from an image.
 
-A machine learning model that identifies any of the original 151 Generation 1 Pokémon from an image.
-Built using TensorFlow/Keras with transfer learning based on the MobileNetV2 architecture.
-Training and fine-tuning were done in Google Colab.
+---
 
-Files in This Repository:
+### 🚀 Overview
+A machine learning model built using **TensorFlow/Keras** with **transfer learning (MobileNetV2)**.  
+Training and fine-tuning were performed in **Google Colab**.
 
-PokemonGen1Classifier.ipynb — Google Colab notebook containing dataset loading, model building, training, and tuning.
+---
 
-predict.py — Python script used to run predictions locally.
+### 📂 Files in this Repository
 
-pokedex_model.keras — The final trained TensorFlow/Keras model.
+| File | Description |
+|------|-------------|
+| `PokemonGen1Classifier.ipynb` | Google Colab notebook (dataset loading, training, and tuning). |
+| `predict.py` | Script for running predictions locally. |
+| `pokedex_model.keras` | Final trained model. |
+| `pokemon_class_names.npy` | NumPy array mapping model outputs to Pokémon names. |
 
-pokemon_class_names.npy — NumPy array that maps the model’s output to the correct Pokémon name.
+---
 
-  How to Run (Local Prediction)
+## 🖥️ How to Run (Local Prediction)
 
-Clone or download this repository and ensure the following files are in the same folder:
+1. **Clone / Download** this repository.
+2. Make sure these files are in the same folder:
+   - `predict.py`
+   - `pokedex_model.keras`
+   - `pokemon_class_names.npy`
 
-predict.py
-pokedex_model.keras
-pokemon_class_names.npy
+---
 
-1. Install the required libraries:
+### ✅ Install Requirements
 
+```bash
 pip install tensorflow numpy pillow
+```
 
+---
 
-2. Run a prediction. Place a test image (example: mrmine.png) in the same folder, then run:
+### 🔍 Run a Prediction
 
-python predict.py mrmine.png
+> Example image: `mrmime.png` (must be in the same folder)
 
+```bash
+python predict.py mrmime.png
+```
 
-  You should see something like:
+Expected output:
 
+```
 Model and class names loaded.
-Processing mrmine.png...
+Processing mrmime.png...
 This image is most likely a Mr. Mime with 99.78% confidence.
+```
 
-This model was trained on the “First Gen Pokémon Classification” dataset from Kaggle.
+---
+
+### 📦 Dataset Used
+Model trained on the **“First Gen Pokémon Classification”** dataset (Kaggle).
+
+---
+
+⭐ If you find this useful, consider giving the project a star!
