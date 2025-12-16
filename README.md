@@ -37,6 +37,7 @@ Place an image (example: `mrmime.png`) in the same folder, then run:
 ```bash
 python predict.py mrmime.png
 ```
+### Pro tip: Just snip a photo for easier access
 
 Example output:
 
